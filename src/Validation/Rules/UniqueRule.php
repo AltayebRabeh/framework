@@ -5,8 +5,7 @@ namespace Phplite\Validation\Rules;
 use Phplite\Database\Database;
 use Rakit\Validation\Rule;
 
-class UniqueRule extends Rule
-{
+class UniqueRule extends Rule {
     protected $message = ":attribute :value has been used";
     
     protected $fillableParams = ['table', 'column', 'except'];
