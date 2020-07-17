@@ -43,7 +43,7 @@ if (! function_exists('redirect')) {
  * @return mixed
  */
 if (! function_exists('previous')) {
-    function previous($path, $data = []) {
+    function previous() {
         return \Phplite\Url\Url::previous();
     }
 }
