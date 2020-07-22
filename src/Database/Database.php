@@ -512,7 +512,7 @@ class Database {
         static::query(static::$query);
         $query = trim(static::$query, ' ');
         $data = static::$connection->prepare($query);
-        $data->execute();
+        $data->execute(static::$binding);
         $pages = ceil($data->rowCount() / $items_per_page);
         $page = Request::get('page');
         $current_page = (! is_numeric($pages) || (Request::get('page') < 1 || Request::get('page') > $pages)) ? 1 : $page;
